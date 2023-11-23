@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #contenedor {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #contenedor>div {
+        width: 16%;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    select {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    #check {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 5px;
+    }
+
+    #submit {
+        margin-top: 20px;
+    }
+</style>
+
+<body>
+
+    <!--add form votacion-->
+    <h1>FORMULARIO DE VOTACIÓN:</h1>
+
+    <div class="container">
+        <hr>
+        <form role="form" id="form">
+
+            <div id="contenedor">
+                <div>
+                    <label for="l_name">Nombre y Apellido</label>
+                    <label for="l_alias">Alias</label>
+                    <label for="l_rut">RUT</label>
+                    <label for="l_email">Email</label>
+                    <label for="l_region">Región</label>
+                    <label for="l_region">Comuna</label>
+                    <label for="l_region">Candidato</label>
+                    <label for="l_region">Como se enteró de nosotros</label>
+                </div>
+                <div>
+                    <input type="text" id="name" name="name">
+                    <input type="text" id="alias" name="alias">
+                    <input type="text" id="rut" name="rut">
+                    <input type="email" id="email" name="email">
+                    <select id="region" name="region">
+                        <option value="">Selecciona una región</option>
+                    </select>
+                    <select id="comuna" name="comuna">
+                        <option value="">Selecciona una comuna</option>
+                        <!-- Aquí se cargarán dinámicamente las comunas -->
+                    </select>
+                    <select id="candidato" name="candidato">
+                        <option value="sannchiss">Sannchiss Perez</option>
+                        <option value="johanna">Johanna Martinez</option>
+                        <option value="pedro">Pedro Valenzuela</option>
+                        <option value="jose">Jose Perez</option>
+                    </select>
+                    <!--add check-->
+                    <div id="check">
+                        <!--add check group-->
+                        <input type="checkbox" name="check" value="web">Web
+                        <input type="checkbox" name="check" value="tv">TV
+                        <input type="checkbox" name="check" value="redes">Redes Sociales
+                        <input type="checkbox" name="check" value="amigo">Amigo
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="submit">
+                <input type="submit" id="submit" value="Votar">
+            </div>
+            <hr>
+
+        </form>
+
+</body>
+
+</html>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js">
+</script>
+<script src="handler.js"></script>
+<script src="validacion.js"></script>
