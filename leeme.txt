@@ -6,7 +6,8 @@ Este sistema de votación en PHP es una aplicación simple que permite a los usu
 
 1. **Requisitos previos**
    - Asegúrate de tener instalado PHP > 8.1.0 en tu sistema. Puedes descargarlo desde [php.net](https://www.php.net/).
-   - Instalar el manejador de Base de datos Mysql server > 5.7
+   - Instalar el manejador de Base de datos Mysql server > 5.7 e importar la base localizada en el repositorio carpeta de nombre: BaseDatos > votaciones.sql
+   
 
 2. **Pasos de instalación**
    - Clona o descarga el repositorio desde [URL del repositorio].
