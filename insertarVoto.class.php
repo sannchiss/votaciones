@@ -1,5 +1,7 @@
 <?php
 
+include_once 'conexion/conexion.php';
+
 class insertarVoto extends conexion
 {
     public function __construct()
@@ -18,8 +20,13 @@ class insertarVoto extends conexion
     public function obtenerDatosVotos($query)
     {
         $resultado = parent::obtenerDatos($query);
-        
+
+        if ($resultado) {
+            return $resultado;
+        }
+
         return $resultado;
     }
+        
 
 }

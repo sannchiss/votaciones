@@ -43,15 +43,12 @@ class conexion
     }
 
 
-    public function obtenerDatos($query)    {    
+    public function obtenerDatos($query)    {
         $resultado = $this->conexion->query($query);
-        $resultadoLista = array();
-
-        while ($row = $resultado->fetch_assoc()) {
-            $resultadoLista[] = $row;
+        if ($resultado) {
+            return $this->convertirUTF8($resultado->fetch_all(MYSQLI_ASSOC));
         }
-
-        return $this->convertirUTF8($resultadoLista); 
+        return $resultado;  
 
     }
 

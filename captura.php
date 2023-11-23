@@ -20,16 +20,21 @@ include_once 'insertarVoto.class.php';
 
  $gestion = new insertarVoto();
 
-$queryValidarRut = "SELECT rut FROM votaciones.registros WHERE rut = ".$data['rut'];
+ $validarRut = array();
+$queryValidarRut = "SELECT rut FROM votaciones.registros WHERE rut = '".$data['rut']."'";
 $validarRut = $gestion->obtenerDatosVotos($queryValidarRut);
 
 
- if(!empty($validarRut)){
-
-
+// validate array
+ if(!empty($validarRut)) {
      echo json_encode(
-         array('mensaje' => 'Rut ya registrado')
+         array(
+            'mensaje' => 'Rut ya registrado',
+            'icono' => 'error')
      );
+
+
+
  } else {
 
     //query
@@ -44,11 +49,19 @@ $validarRut = $gestion->obtenerDatosVotos($queryValidarRut);
 
     if ($resultado) {
         echo json_encode(
-            array('mensaje' => 'Registro exitoso')
+            array(
+                'mensaje' => 'Registro exitoso',
+                'icono' => 'success'
+                
+                )
         );
     } else {
         echo json_encode(
-            array('mensaje' => 'Error al registrar')
+            array(
+                'mensaje' => 'Error al registrar',
+                'icono' => 'error'
+                
+                )
         );
     }
 

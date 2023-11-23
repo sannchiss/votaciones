@@ -100,7 +100,7 @@ $().ready(function () {
                         success: function (response) {
                             Swal.fire({
                                 position: "top-end",
-                                icon: "success",
+                                icon: response.icono,
                                 title: response.mensaje,
                                 showConfirmButton: false,
                                 timer: 1500
