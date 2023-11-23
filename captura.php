@@ -3,6 +3,12 @@
 include_once 'conexion/conexion.php';
 include_once 'insertarVoto.class.php';
 
+/**
+ * En este archivo se inserta el voto y se valida el rut
+ * 
+ */
+
+
 // get data json ajax
  $data = $_POST['data'];
 
@@ -16,8 +22,6 @@ include_once 'insertarVoto.class.php';
 
 $queryValidarRut = "SELECT rut FROM votaciones.registros WHERE rut = ".$data['rut'];
 $validarRut = $gestion->obtenerDatosVotos($queryValidarRut);
-
-
 
 
  if(!empty($validarRut)){

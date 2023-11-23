@@ -1,6 +1,11 @@
 <?php
 require_once 'conexion/conexion.php';
 
+/**
+ * En este archivo se inserta el voto y se valida el rut
+ * 
+ */
+
 class ComunasRegiones extends conexion
 {
     public function __construct()
