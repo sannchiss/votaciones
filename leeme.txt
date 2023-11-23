@@ -1,0 +1,29 @@
+# Sistema de Votación en PHP
+
+Este sistema de votación en PHP es una aplicación simple que permite a los usuarios realizar votaciones en diferentes categorías.
+
+## Instalación
+
+1. **Requisitos previos**
+   - Asegúrate de tener instalado PHP > 8.1.0 en tu sistema. Puedes descargarlo desde [php.net](https://www.php.net/).
+   - Instalar el manejador de Base de datos Mysql server > 5.7
+
+2. **Pasos de instalación**
+   - Clona o descarga el repositorio desde [URL del repositorio].
+   - Navega hasta el directorio del proyecto.
+   - Copia el archivo `config.example.php` y renómbralo a `config`.
+   - Edita el archivo `config` con la información de la base de datos y otros ajustes necesarios.
+   - Importa el archivo SQL `database.sql` a tu base de datos para configurar las tablas necesarias.
+   - Ejecuta la aplicación PHP en tu servidor local.
+
+## Uso
+
+- Accede a la URL de la aplicación en tu navegador.
+- Regístrate como nuevo usuario o inicia sesión con credenciales existentes.
+- Explora las categorías disponibles y vota por las opciones deseadas.
+- [Agregar más instrucciones sobre cómo utilizar la aplicación si es necesario].
+
+
+## Contacto
+
+Si tienes preguntas o comentarios, contáctame en [tu dirección de correo electrónico].
